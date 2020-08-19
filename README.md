@@ -1,6 +1,6 @@
 # pocket_recipes
 
-A new Flutter project.
+Multi route application using flutter.
 
 ## Getting Started
 
