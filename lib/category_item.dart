@@ -3,12 +3,15 @@ import 'package:pocket_recipes/category_meals_screen.dart';
 
 class CategoryItem extends StatelessWidget {
   final String title;
+  final String id;
   final Color color;
 
-  const CategoryItem({Key key, this.color, this.title}) : super(key: key);
+  const CategoryItem({Key key, this.color, this.title, this.id})
+      : super(key: key);
   void selectCategory(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(
-      builder: (context) => CategoryMealsScreen(),
+      builder: (context) =>
+          CategoryMealsScreen(categoryId: id, categoryTitle: title),
     ));
   }
 
