@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pocket_recipes/category_meals_screen.dart';
 
 import 'categories_screen.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.pink,
         accentColor: Colors.amber,
-        scaffoldBackgroundColor: Colors.yellow[100],
+        scaffoldBackgroundColor: Colors.yellow[50],
         canvasColor: Color.fromRGBO(255, 254, 229, 1),
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
@@ -27,7 +28,11 @@ class MyApp extends StatelessWidget {
                 fontWeight: FontWeight.w400)),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: CategoriesScreen(),
+      // initialRoute: '/',  // this is default
+      routes: {
+        '/': (context) => CategoriesScreen(),
+        CategoryMealsScreen.routeName: (context) => CategoryMealsScreen(),
+      },
     );
   }
 }
